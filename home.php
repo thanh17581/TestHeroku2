@@ -15,6 +15,9 @@ if(isset($_POST['wrap-input100']) && isset($_POST['wrap-input100 rs1']))
 			header("location:index.php");
 		}
 }
+else{
+	echo "fail";
+}
 ?>
 <!DOCTYPE html>
 <html>
