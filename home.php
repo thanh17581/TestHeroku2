@@ -21,7 +21,7 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-	
+
 	<title>Thanh Store</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +69,7 @@ else
 	require_once './dbconnector.php';
 	$sql = "SELECT * FROM product";
 	$pgo = $pdo->prepare($sql);
-	foreach ($pdo->query($sql)) as $row){
+	foreach ($pdo->query($sql) as $row){
 	?>
 	<tr>
 		<td class="info"><?php echo $row[productid]?></td>
