@@ -1,0 +1,79 @@
+body{
+			background-color: #4C3A3A;
+		}
+		.trang{
+			width: 80%;
+			margin: 0 auto;
+		}
+		.dau{
+			height: 250px;
+			background-color: #BCDCF4;
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			border-top-style: solid;
+			border-color: #D50909;
+			border-right-style: solid;
+			border-color: #D50909;
+			border-left-style: solid;
+			border-color: #D50909;
+		}
+		.menu{
+			height: 50px;
+			background-color:#FE94E6;
+			border-bottom-style: solid;
+			border-color: #D50909;
+			border-right-style: solid;
+			border-color: #D50909;
+			border-left-style: solid;
+			border-color: #D50909;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+		.menu ul{
+		padding:0;
+		margin:0;
+		list-style-type: none;
+		}
+		.menu li{
+		float: left;
+		padding-left: 0px;
+		}
+		.menu a{
+			color: #731010;
+			line-height: 50px;
+			font-size: 22px;
+			padding: 0 100px;
+			text-decoration: none;
+			display: block;
+		}
+		.menu a:hover{
+			background-color: #DBF769;
+			color: #151212;
+		}
+		.than{
+			height: 870px;
+			background-color: white;
+			border-style: solid;
+			border-color: #D50909;
+			margin-top: 10px;
+			padding: 0 auto;
+			border-radius: 10px;
+		}
+		.login{
+			font-size: 50px;
+			color: yellow;
+			padding: 20px 200px 800px 450px;
+		}
+		.user{
+			margin-top: 50px;
+			}
+		#user1{
+			width: 300px;
+      		box-sizing: border-box;
+    		border: 1px solid black;
+     		border-radius: 20px;
+      		padding: 12px 14px;
+			}		
