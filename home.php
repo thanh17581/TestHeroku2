@@ -1,22 +1,23 @@
 <?php 
-require_once './dbconnector.php';
-if(isset($_POST['wrap-input100']) && isset($_POST['wrap-input100 rs1']))
+require_once './connect.php';  
+if(isset($_POST["username"]) && isset($_POST["pass"]))
 {
-	$user = $_POST['wrap-input100'];
-	$pass = $_POST['wrap-input100 rs1'];
-	$sql ="select username,pass from account where username= '".$user."' and pass= '".$pass."'";
-	$message1 = "Login successful"; 
-	$message2 = "Login again!";
-	if(pg_num_rows(pg_query($con,$sql))==1)
-		echo "<script type='text/javascript'> alert('$message1');</script>";
-	else
-		{ 
-			echo "<script type='text/javascript'> alert('$message2');</script>";
-			header("location:index.php");
-		}
-}
-else{
-	echo "fail";
+	$user = $_POST["username"];
+	$pass = $_POST["pass"];
+	$sql ="SELECT * FROM account WHERE username = '$user' AND pass= '$pass'";
+	$rows = pg_query($sql);
+	if(pg_num_rows($rows)==1) { ?>
+		<script>
+            alert("Login successfully!!");
+        </script>
+    <?php
+    } else { 
+        ?>
+            <script>
+                alert("Wrong Username/Password");
+                window.location.href = "/index.php";
+            </script>
+        <?php }
 }
 ?>
 <!DOCTYPE html>
