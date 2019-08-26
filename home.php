@@ -6,17 +6,14 @@ if(isset($_POST['wrap-input100']) && isset($_POST['wrap-input100 rs1']))
 	$pass = $_POST['wrap-input100 rs1'];
 	$sql ="select username,pass from account where username= '".$user."' and pass= '".$pass."'";
 	$message1 = "Login successful"; 
+	$message2 = "Login again!";
 	if(pg_num_rows(pg_query($con,$sql))==1)
 		echo "<script type='text/javascript'> alert('$message1');</script>";
 	else
 		{ 
+			echo "<script type='text/javascript'> alert('$message2');</script>";
 			header("location:index.php");
 		}
-}
-else
-{
-	echo "<script type='text/javascript'> alert('$message1');</script>";
-	header("location:index.php");
 }
 ?>
 <!DOCTYPE html>
