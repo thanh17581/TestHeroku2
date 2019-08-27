@@ -14,7 +14,7 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
     } else { 
         ?>
             <script>
-            	echo test
+
                 alert("Wrong Username/Password");
                 window.location.href = "/index.php";
             </script>
@@ -72,7 +72,10 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
             require_once './connect.php';
             $sql = "SELECT * FROM product";
             $stmt = $pdo->prepare($sql);
-            foreach ($pdo->query($sql) as $row) {
+            $stmt -> setFetchMode(PDO::Fetch_ASSOC)
+            $stmt -> execute();
+            $resultSet = $stmt->fetchAll;
+            foreach ($resultSet as $row) {
             ?>
 	<tr>
 		<td class="Bz"><?php echo $row[productid]?></td>
