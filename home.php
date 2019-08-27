@@ -59,44 +59,36 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 </style>
 </head>
 <body>
-<<div>
-        <h1>Managing Product</h1>
-        <table>
-            <tr>
-                <th class="tit">ID</th>
-                <th class="tit">Name</th>
-                <th class="tit">Price ($)</th>
-                <th class="tit">Description</th>
-                <th class="tit">Editing</th>
-            </tr>
-
-            <?php
-            require_once './connect.php';
-            $sql = "SELECT * FROM product"; 
-        $stmt = $pdo->prepare($sql); 
-        $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-        $stmt->execute();
-        $resultSet = $stmt->fetchAll(); {
+<div class="head1">Product</div>
+<table>
+	<tr>
+		<th class="Bz">ID</th> 
+		<th class="Bz">Image</th>
+		<th class="Bz">Name</th>
+		<th class="Bz">Price($)</th>
+		<th class="Bz">Detail</th>
+	</tr>
+	<?php
+            require_once 'connect.php';
+            foreach ($resultSet as $row) {
             ?>
-                <tr>
-                    <td class="info"><?php echo $row['productid']?></td> 
-                    <td class="info"><?php echo $row['image']; ?></td>
-                    <td class="info"><?php echo $row['name']?></td> 
-                    <td class="info"><?php echo $row['price']?></td> 
-                    <td class="info"><?php echo $row['detail']?></td> 
-                    <td class="info">
-                        <form action='/delete.php' method="POST">
+	<tr>
+		<th class="Bz"><?= $row['productid']?></th> 
+		<th class="Bz"><?= $row['image']?></th> 
+		<th class="Bz"><?= $row['name']?></th>
+		<th class="Bz"><?= $row['price']?></th>
+		<th class="Bz"><?= $row['detail']?></th>
+	</tr>
+	<tr>
+		<form action='/delete.php' method="POST">
                             <input type='hidden' name='productid' value='<?php echo $row['productid']?>'>
                             <input class="edit-btn" type='submit' value='Delete'>
                         </form> <br>
-                    </td>
-                </tr>
-            <?php
-            }
-            ?> 
-        </table>
-        <button><a href="/add.php">Add More</a></button>
-        <br><br>
-    </div>
+	</tr>
+<?php
+}
+?>
+</table>
+<button><a href="/add.php">Add</a></button>
 </body>
 </html>
