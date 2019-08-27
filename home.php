@@ -20,6 +20,9 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
             </script>
         <?php }
 }
+else{
+	<script>window.location.href = "/index.php";</script>
+}
 ?>
 <!DOCTYPE html>
 <html>
