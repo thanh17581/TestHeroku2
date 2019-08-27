@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
 require_once './dbconnector.php';  
 if(isset($_POST["username"]) && isset($_POST["pass"]))
 {
@@ -20,7 +20,7 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
             </script>
         <?php }
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html>
 <head>

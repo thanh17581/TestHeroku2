@@ -20,14 +20,26 @@ $conn = pg_connect("host=ec2-23-21-160-38.compute-1.amazonaws.com port = 5432 db
 <body>
 <?php
     include "connect.php";
-        $id = $_POST["txtId"];
-        $name = $_POST["txtName"];
-        $price = $_POST["txtPrice"];
-        $content = $_POST["txtContent"];
-
-        $sql = "INSERT INTO product (id, name, price, content) VALUES (?,?,?,?)";
-        $stmt= $pdo->prepare($sql);
-        $stmt->execute([$id, $name, $price, $content])
+        if(isset($_POST["username"]) && isset($_POST["pass"]))
+{
+	$user = $_POST["username"];
+	$pass = $_POST["pass"];
+	$sql ="SELECT * FROM account WHERE username = '$user' AND pass= '$pass'";
+	$rows = pg_query($sql); 
+	if(pg_num_rows($rows)==1) { ?>
+		<script>
+            alert("Login successfully!!");
+            window.location.href = "/home.php"; 
+        </script>
+    <?php
+    } else { 
+        ?> 
+            <script>
+                alert("Wrong Username/Password");
+                window.location.href = "/index.php"; 
+            </script>
+        <?php }
+}
 
     ?>
 
