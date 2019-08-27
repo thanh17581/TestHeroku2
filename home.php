@@ -70,19 +70,15 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 	</tr>
 	<?php
             require_once './connect.php';
-            $sql = "SELECT * FROM product";
-            $stmt = $pdo->prepare($sql);
-            $stmt -> setFetchMode(PDO::Fetch_ASSOC)
-            $stmt -> execute();
-            $resultSet = $stmt->fetchAll;
+            
             foreach ($resultSet as $row) {
             ?>
 	<tr>
-		<td class="Bz"><?php echo $row[productid]?></td>
-		<td class="Bz"><?php echo $row[image]?></td>
-		<td class="Bz"><?php echo $row[name]?></td>
-		<td class="Bz"><?php echo $row[price]?></td>
-		<td class="Bz"><?php echo $row[detail]?></td>
+		<th class="Bz"><?php echo $row[productid]?></th>
+		<th class="Bz"><?php echo $row[image]?></th>
+		<th class="Bz"><?php echo $row[name]?></th>
+		<th class="Bz"><?php echo $row[price]?></th>
+		<th class="Bz"><?php echo $row[detail]?></th>
 	</tr>
 <?php
 }
