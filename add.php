@@ -12,7 +12,7 @@
 <body>
     <div>
         <h1>Adding Product Form</h1>
-        <?php 
+       <!--  <?php 
         require("dbconnector.php");   
         if(isset($_POST["submit"]))
             {   
@@ -54,7 +54,25 @@
                         }
                     }
             }
-			?>
+			?> -->
+
+            <?php require '../dbconnector.php'; ?>
+
+<?php
+  if (isset($_POST['submit'])) {
+    $productid = $_POST["productid"];
+    $image = $_POST["image"];
+    $name = $_POST["name"];
+    $price = $_POST["price"];
+    $detail = $_POST["detail"];
+    $data = ['productid' => $trainer_id,'image' => $image ,'name' => $name, 'price'=>$price,'detail'=>$detail];
+    $sql = "INSERT INTO product(productid, image, name, price, detail) VALUES (:productid,:image, :name,:price,:detail)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($data);
+    header('Location: add.php');
+    exit();
+  }
+?>
         <form action="add.php" method="POST">
             <input type="text" name="productid" placeholder="ID"> <br>
             <input type="text" name="image" placeholder="Link Image"> <br>
