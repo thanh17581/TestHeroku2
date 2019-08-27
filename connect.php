@@ -10,7 +10,7 @@
 ));
     $sql = "SELECT * FROM product";
             $stmt = $pdo->prepare($sql);
-            $stmt -> setFetchMode(PDO::Fetch_ASSOC)
+            $stmt -> setFetchMode(PDO::FETCH_ASSOC);
             $stmt -> execute();
             $resultSet = $stmt->fetchAll(); // =)))
  
