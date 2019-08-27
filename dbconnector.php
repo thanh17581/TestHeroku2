@@ -19,7 +19,7 @@ $conn = pg_connect("host=ec2-23-21-160-38.compute-1.amazonaws.com port = 5432 db
 </head>
 <body>
 <?php
-    include "database.php";
+    include "connect.php";
         $id = $_POST["txtId"];
         $name = $_POST["txtName"];
         $price = $_POST["txtPrice"];
