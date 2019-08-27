@@ -12,6 +12,6 @@
             $stmt = $pdo->prepare($sql);
             $stmt -> setFetchMode(PDO::Fetch_ASSOC)
             $stmt -> execute();
-            $resultSet = $stmt->fetchAll;
+            $resultSet = $stmt->fetchAll(); // =)))
  
 ?>
