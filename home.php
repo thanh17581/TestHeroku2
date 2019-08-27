@@ -6,7 +6,7 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 	$user = $_POST["username"];
 	$pass = $_POST["pass"];
 	$sql ="SELECT * FROM account WHERE username = '$user' AND pass= '$pass'";
-	$rows = pg_query($sql);
+	$rows = pg_query($sql); 
 	if(pg_num_rows($rows)==1) { ?>
 		<script>
             alert("Login successfully!!");
@@ -22,9 +22,6 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
         <?php }
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +63,7 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 <div class="head1">Product</div>
 <table>
 	<tr>
-		<th class="Bz">ID</th>
+		<th class="Bz">ID</th> 
 		<th class="Bz">Image</th>
 		<th class="Bz">Name</th>
 		<th class="Bz">Price($)</th>
@@ -78,8 +75,8 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
             foreach ($resultSet as $row) {
             ?>
 	<tr>
-		<th class="Bz"><?= $row['productid']?></th>
-		<th class="Bz"><?= $row['image']?></th>
+		<th class="Bz"><?= $row['productid']?></th> 
+		<th class="Bz"><?= $row['image']?></th> 
 		<th class="Bz"><?= $row['name']?></th>
 		<th class="Bz"><?= $row['price']?></th>
 		<th class="Bz"><?= $row['detail']?></th>
