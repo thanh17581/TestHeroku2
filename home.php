@@ -75,11 +75,11 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
             foreach ($pdo->query($sql) as $row) {
             ?>
 	<tr>
-		<td class="info"><?php echo $row[productid]?></td>
-		<td class="info"><?php echo $row[image]?></td>
-		<td class="info"><?php echo $row[name]?></td>
-		<td class="info"><?php echo $row[price]?></td>
-		<td class="info"><?php echo $row[detail]?></td>
+		<td class="Bz"><?php echo $row[productid]?></td>
+		<td class="Bz"><?php echo $row[image]?></td>
+		<td class="Bz"><?php echo $row[name]?></td>
+		<td class="Bz"><?php echo $row[price]?></td>
+		<td class="Bz"><?php echo $row[detail]?></td>
 	</tr>
 <?php
 }
