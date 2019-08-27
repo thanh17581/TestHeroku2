@@ -72,9 +72,11 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 
             <?php
             require_once './connect.php';
-            $sql = "SELECT * FROM product";
-            $stmt = $pdo->prepare($sql);
-            foreach ($pdo->query($sql) as $row) {
+            $sql = "SELECT * FROM product"; 
+        $stmt = $pdo->prepare($sql); 
+        $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+        $stmt->execute();
+        $resultSet = $stmt->fetchAll(); {
             ?>
                 <tr>
                     <td class="info"><?php echo $row['productid']?></td> 
