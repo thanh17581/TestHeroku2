@@ -14,6 +14,7 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
     } else { 
         ?>
             <script>
+            	echo test
                 alert("Wrong Username/Password");
                 window.location.href = "/index.php";
             </script>
