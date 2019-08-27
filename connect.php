@@ -14,12 +14,12 @@
 		    $db["user"],
 		    $db["pass"],
 		    ltrim($db["path"], "/")
-        ));
-        $sql = "SELECT * FROM product"; 
-        $stmt = $pdo->prepare($sql); 
-        $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-        $stmt->execute();
-        $resultSet = $stmt->fetchAll();
+        // ));
+        // $sql = "SELECT * FROM product"; 
+        // $stmt = $pdo->prepare($sql); 
+        // $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+        // $stmt->execute();
+        // $resultSet = $stmt->fetchAll();
         
         ?>
 </body>
