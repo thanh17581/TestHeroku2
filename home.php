@@ -78,12 +78,13 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 		<th class="Bz"><?= $row['name']?></th>
 		<th class="Bz"><?= $row['price']?></th>
 		<th class="Bz"><?= $row['detail']?></th>
-	</tr>
-	<tr>
 		<form action='/delete.php' method="POST">
                             <input type='hidden' name='productid' value='<?php echo $row['productid']?>'>
                             <input class="edit-btn" type='submit' value='Delete'>
                         </form> <br>
+	</tr>
+	<tr>
+		
 	</tr>
 <?php
 }
