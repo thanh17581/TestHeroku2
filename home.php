@@ -1,27 +1,4 @@
 
-<?php 
-require_once './dbconnector.php';  
-if(isset($_POST["username"]) && isset($_POST["pass"]))
-{
-	$user = $_POST["username"];
-	$pass = $_POST["pass"];
-	$sql ="SELECT * FROM account WHERE username = '$user' AND pass= '$pass'";
-	$rows = pg_query($sql); 
-	if(pg_num_rows($rows)==1) { ?>
-		<script>
-            alert("Login successfully!!");
-        </script>
-    <?php
-    } else { 
-        ?> 
-            <script>
-
-                alert("Wrong Username/Password");
-                window.location.href = "/index.php"; 
-            </script>
-        <?php }
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,7 +48,6 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 	</tr>
 	<?php
             require_once 'connect.php';
-            
             foreach ($resultSet as $row) {
             ?>
 	<tr>
