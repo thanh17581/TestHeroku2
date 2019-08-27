@@ -74,11 +74,11 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
             foreach ($resultSet as $row) {
             ?>
 	<tr>
-		<th class="Bz"><?php echo $row[productid]?></th>
-		<th class="Bz"><?php echo $row[image]?></th>
-		<th class="Bz"><?php echo $row[name]?></th>
-		<th class="Bz"><?php echo $row[price]?></th>
-		<th class="Bz"><?php echo $row[detail]?></th>
+		<th class="Bz"><? = $row[productid]?></th>
+		<th class="Bz"><? = $row[image]?></th>
+		<th class="Bz"><? = $row[name]?></th>
+		<th class="Bz"><? = $row[price]?></th>
+		<th class="Bz"><? = $row[detail]?></th>
 	</tr>
 <?php
 }
