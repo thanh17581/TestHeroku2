@@ -20,7 +20,7 @@
                 $image = $_POST["image"];
                 $name = $_POST["name"];
                 $price = $_POST["price"];
-                $detail = $_POST["descrip"];
+                $detail = $_POST["detail"];
                 if ($name == ""||$price == ""|| $detail == ""||$image==""||$productid=="") 
                     {
                         ?>
