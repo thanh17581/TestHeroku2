@@ -16,8 +16,13 @@ th, td {height:100px; width:300px; text-align:center; vertical-align:center;}
  left: 0;
  width: 100%;
 }
-body {
-	font-family: 'Lato', sans-serif;
+body {/*
+	font-family: 'Lato', sans-serif;*/
+	font-family: Helvetica,Arial,sans-serif;
+ font-size: 16px;
+ line-height: 1.254em;
+ margin: 0;
+ padding: 0;
 	background: #353535;
 	color: #FFF;
 }
@@ -31,8 +36,8 @@ body {
 /*body {
   margin: 0;
 }*/
-.header {
-  background-color: #f1f1f1;
+.header {/*
+  background-color: #f1f1f1;*/
   padding: 20px;
   text-align: center;
 }
