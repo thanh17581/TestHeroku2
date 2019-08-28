@@ -79,5 +79,6 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 			</table></br>
 		</div>
 		<div class="last"><button><a href="/add.php">Add</a></button></div>
+		<div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button victoria-one">Sign up</a> </div>
 </body>
 </html>
