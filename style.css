@@ -5,6 +5,7 @@ th, td {height:100px; width:300px; text-align:center; vertical-align:center;}
  box-sizing: border-box;
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
+ background-color: #f1f1f1;
 }
 .content {
  padding-left: 150px;
@@ -32,4 +33,9 @@ body {
   .column {
     width: 100%;
   }
+}
+.last{
+	padding-right: 49%;
+	padding-left: 49%;
+	padding-top: 20px;
 }
