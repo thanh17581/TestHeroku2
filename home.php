@@ -41,16 +41,16 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div id="container">
 		<div class="header"><h1>Product</h1></div>
-<table>
-	<tr>
-		<th class="Bz">ID</th> 
-		<th class="Bz">Image</th>
-		<th class="Bz">Name</th>
-		<th class="Bz">Price($)</th>
-		<th class="Bz">Detail</th>
-	</tr>
+		<div class="content">
+			<table>
+			<tr>
+				<th class="Bz">ID</th> 
+				<th class="Bz">Image</th>
+				<th class="Bz">Name</th>
+				<th class="Bz">Price($)</th>
+				<th class="Bz">Detail</th>
+			</tr>
 	<?php
         require_once 'connect.php';
         $sql = "SELECT * FROM product"; 
@@ -60,27 +60,24 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
         $resultSet = $stmt->fetchAll();
         foreach ($resultSet as $row) {
         ?>
-	<tr>
-		<td class="Bz"><?= $row['productid']?></th> 
-		<td class="Bz"><?= $row['image']?></th> 
-		<td class="Bz"><?= $row['name']?></th>
-		<td class="Bz"><?= $row['price']?></th>
-		<td class="Bz"><?= $row['detail']?></th>
-		<form action='/delete.php' method="POST">
-        	<input type='hidden' name='productid' value='<?php echo $row['productid']?>'>
-        	<input class="edit-btn" type='submit' value='Delete'>
-        </form> <br>
-	</tr>
-	<tr>
-		
-	</tr>
-<?php
-}
-?>
-</table></br>
-
+			<tr>
+				<td class="Bz"><?= $row['productid']?></td> 
+				<td class="Bz"><?= $row['image']?></td> 
+				<td class="Bz"><?= $row['name']?></td>
+				<td class="Bz"><?= $row['price']?></td>
+				<td class="Bz"><?= $row['detail']?></td>
+				<td>
+				<form action='/delete.php' method="POST">
+		        	<input type='hidden' name='productid' value='<?php echo $row['productid']?>'>
+		        	<input class="edit-btn" type='submit' value='Delete'>
+		        </form> <br>
+		        </td>
+			</tr>
+	<?php
+	}
+	?>
+			</table></br>
+		</div>
 <button><a href="/add.php">Add</a></button>
-	</div>
-
 </body>
 </html>

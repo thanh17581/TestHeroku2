@@ -6,7 +6,7 @@ th, td {height:100px; width:300px; text-align:center; vertical-align:center;}
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
 }
-#container {
+.content {
  padding-left: 150px;
  padding-right: 150px;
  position: relative;
