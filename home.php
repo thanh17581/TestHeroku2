@@ -1,5 +1,5 @@
 <?php 
-require_once './dbconnector.php';  
+require_once './connect.php';  
 if(isset($_POST["username"]) && isset($_POST["pass"]))
 {
 	$user = $_POST["username"];
@@ -59,6 +59,11 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 	</tr>
 	<?php
             require_once 'connect.php';
+            $sql = "SELECT * FROM product"; 
+        $stmt = $pdo->prepare($sql); 
+        $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+        $stmt->execute();
+        $resultSet = $stmt->fetchAll();
             foreach ($resultSet as $row) {
             ?>
 	<tr>
