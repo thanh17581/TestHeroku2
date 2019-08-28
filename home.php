@@ -51,24 +51,25 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 		<th class="Bz">Detail</th>
 	</tr>
 	<?php
-            require_once 'connect.php';
-            $sql = "SELECT * FROM product"; 
+        require_once 'connect.php';
+        $sql = "SELECT * FROM product"; 
         $stmt = $pdo->prepare($sql); 
         $stmt->setFetchMode(PDO::FETCH_ASSOC); 
         $stmt->execute();
         $resultSet = $stmt->fetchAll();
-            foreach ($resultSet as $row) {
-            ?>
+        foreach ($resultSet as $row) {
+        ?>
 	<tr>
 		<td class="Bz"><?= $row['productid']?></th> 
 		<td class="Bz"><?= $row['image']?></th> 
 		<td class="Bz"><?= $row['name']?></th>
 		<td class="Bz"><?= $row['price']?></th>
 		<td class="Bz"><?= $row['detail']?></th>
-		<form action='/delete.php' method="POST">
-                            <input type='hidden' name='productid' value='<?php echo $row['productid']?>'>
-                            <input class="edit-btn" type='submit' value='Delete'>
-                        </form> <br>
+			<button><form action='/delete.php' method="POST">
+        	<input type='hidden' name='productid' value='<?php echo $row['productid']?>'>
+        	<input class="edit-btn" type='submit' value='Delete'>
+        </form> <br></button>
+		
 	</tr>
 	<tr>
 		
