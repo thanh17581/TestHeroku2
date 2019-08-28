@@ -47,11 +47,10 @@ body {/*
   }
 }
 .last{
-	padding-right: 49%;
-	padding-left: 49%;
+	padding-right: 40%;
+	padding-left: 40%;
 	padding-top: 20px;
 	font-size: 26;
-	display: block;
 }
 a.animated-button.victoria-one {
 	border: 2px solid #D24D57;
