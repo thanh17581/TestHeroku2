@@ -38,39 +38,9 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<style>
-	.head1{
-		font-size: 50px;
-			color: yellow;
-			padding: 20px 200px 800px 450px;
-	}
-</style>
 </head>
 <body>
-	<?php 
-require_once './connect.php';  
-if(isset($_POST["username"]) && isset($_POST["pass"]))
-{
-	$user = $_POST["username"];
-	$pass = $_POST["pass"];
-	$sql ="SELECT * FROM account WHERE username = '$user' AND pass= '$pass'";
-	$rows = pg_query($sql); 
-	if(pg_num_rows($rows)==1) { ?>
-		<script>
-            alert("Login successfully!!");
-            window.location.href = "/home.php"; 
-        </script>
-    <?php
-    } else { 
-        ?> 
-            <script>
-                alert("Wrong Username/Password");
-                window.location.href = "/index.php"; 
-            </script>
-        <?php }
-}
-?>
-<div class="head1">Product</div>
+<div class="header"><h1>Product</h1></div>
 <table>
 	<tr>
 		<th class="Bz">ID</th> 
@@ -89,11 +59,11 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
             foreach ($resultSet as $row) {
             ?>
 	<tr>
-		<th class="Bz"><?= $row['productid']?></th> 
-		<th class="Bz"><?= $row['image']?></th> 
-		<th class="Bz"><?= $row['name']?></th>
-		<th class="Bz"><?= $row['price']?></th>
-		<th class="Bz"><?= $row['detail']?></th>
+		<td class="Bz"><?= $row['productid']?></th> 
+		<td class="Bz"><?= $row['image']?></th> 
+		<td class="Bz"><?= $row['name']?></th>
+		<td class="Bz"><?= $row['price']?></th>
+		<td class="Bz"><?= $row['detail']?></th>
 		<form action='/delete.php' method="POST">
                             <input type='hidden' name='productid' value='<?php echo $row['productid']?>'>
                             <input class="edit-btn" type='submit' value='Delete'>
