@@ -14,9 +14,7 @@
 		    $db["user"],
 		    $db["pass"],
 		    ltrim($db["path"], "/")
-        ));
-        
-        
+        ));        
         ?>
 </body>
 </html>
