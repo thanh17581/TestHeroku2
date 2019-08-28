@@ -1,5 +1,5 @@
 <?php 
-require_once './connect.php';  
+require_once './dbconnector.php';  
 if(isset($_POST["username"]) && isset($_POST["pass"]))
 {
 	$user = $_POST["username"];
