@@ -41,7 +41,8 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="header"><h1>Product</h1></div>
+	<div id="container">
+		<div class="header"><h1>Product</h1></div>
 <table>
 	<tr>
 		<th class="Bz">ID</th> 
@@ -76,7 +77,10 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 <?php
 }
 ?>
-</table>
+</table></br>
+
 <button><a href="/add.php">Add</a></button>
+	</div>
+
 </body>
 </html>

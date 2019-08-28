@@ -2,12 +2,26 @@ table {border-collapse:collapse;}
 table,th, td {border: 1px solid #333;}
 th, td {height:100px; width:300px; text-align:center; vertical-align:center;}
 * {
-  box-sizing: border-box;
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
 }
-
+#container {
+ padding-left: 150px;
+ position: relative;
+ left: 0;
+ width: 100%;
+}
 body {
-  margin: 0;
+ font-family: Helvetica,Arial,sans-serif;
+ font-size: 16px;
+ line-height: 1.254em;
+ margin: 0;
+ padding: 0;
 }
+/*body {
+  margin: 0;
+}*/
 .header {
   background-color: #f1f1f1;
   padding: 20px;
