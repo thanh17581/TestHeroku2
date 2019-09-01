@@ -24,7 +24,7 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 <html>
 <head>
 
-	<title>Thanh Store</title>
+	<title>ATN Store</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
@@ -79,6 +79,5 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
 			</table></br>
 		</div>
 		<div class="last"><button><a href="/add.php">Add</a></button></div>
-		
 </body>
 </html>

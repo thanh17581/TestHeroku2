@@ -28,7 +28,6 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
@@ -36,19 +35,16 @@
 					<span class="login100-form-title p-b-33">
 						Login
 					</span>
-
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz" name="username">
 						<input class="input100" type="text" name="username" placeholder="Email">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
-
 					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required" name="pass">
 						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
-
 					<div class="container-login100-form-btn m-t-20">
 						<button class="login100-form-btn">
 							Login
@@ -57,10 +53,7 @@
 				</form>
 			</div>
 		</div>
-	</div>
-	
-
-	
+	</div>	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
